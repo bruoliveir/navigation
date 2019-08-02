@@ -9,6 +9,52 @@
         android:id="@+id/fFirst"
         android:name="com.bruoliveir.navigation.FirstFragment"
         android:label="First"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_first_to_second"
+            app:destination="@id/fSecond" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fSecond"
+        android:name="com.bruoliveir.navigation.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_second_to_third"
+            app:destination="@id/fThird" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fThird"
+        android:name="com.bruoliveir.navigation.ThirdFragment"
+        android:label="Third"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_third_to_fourth"
+            app:destination="@id/fFourth" />
+
+        <action
+            android:id="@+id/action_third_to_fifth"
+            app:destination="@id/fFifth" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fFourth"
+        android:name="com.bruoliveir.navigation.FourthFragment"
+        android:label="Fourth"
+        tools:layout="@layout/fragment_fourth" />
+
+    <fragment
+        android:id="@+id/fFifth"
+        android:name="com.bruoliveir.navigation.FifthFragment"
+        android:label="Fifth"
+        tools:layout="@layout/fragment_fifth" />
 
 </navigation>

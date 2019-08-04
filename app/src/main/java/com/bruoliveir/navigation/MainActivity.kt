@@ -16,17 +16,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupActionBar()
-        setupTitleFromDestination()
+        setupTitleWithDestinationLabel()
     }
 
     override fun onSupportNavigateUp() =
         navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
 
+    override fun onBackPressed() {
+        navController.navigateUp()
+    }
+
     private fun setupActionBar() {
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
-    private fun setupTitleFromDestination() {
+    private fun setupTitleWithDestinationLabel() {
         navController.addOnDestinationChangedListener { controller, _, _ ->
             title = controller.currentDestination?.label
         }
